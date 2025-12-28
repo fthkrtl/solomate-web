@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoloMate - Gizlilik Politikası</title>
+    <title>SoloMate - Privacy Policy</title>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -56,6 +56,34 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #fff;
+        }
+
+        .lang-switch {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .lang-switch:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .content {
@@ -117,19 +145,6 @@
             display: block;
         }
 
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-bottom: 40px;
-            font-weight: 500;
-        }
-
-        .back-link:hover {
-            color: #fff;
-        }
-
         .highlight-box {
             background: rgba(99, 102, 241, 0.1);
             border: 1px solid rgba(99, 102, 241, 0.2);
@@ -150,6 +165,10 @@
             color: #475569;
             font-size: 13px;
         }
+
+        .lang-tr {
+            display: none;
+        }
     </style>
 </head>
 
@@ -158,73 +177,177 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">SoloMate</a>
-                <a href="index.html" class="back-link">← Ana Sayfa</a>
+                <div style="display:flex; align-items:center; gap:20px;">
+                    <a href="index.html" class="logo">SoloMate</a>
+                    <button class="lang-switch" onclick="toggleLanguage()">TR / EN</button>
+                </div>
+                <a href="index.html" class="back-link">
+                    <span class="lang-tr">← Ana Sayfa</span>
+                    <span class="lang-en">← Home</span>
+                </a>
             </nav>
         </div>
     </header>
 
     <main class="container content">
-        <h1>Gizlilik Politikası</h1>
-        <span class="update-date">Son Güncelleme: 28 Aralık 2025</span>
+        <h1 class="lang-tr">Gizlilik Politikası</h1>
+        <h1 class="lang-en">Privacy Policy</h1>
+
+        <span class="update-date">
+            <span class="lang-tr">Son Güncelleme: 28 Aralık 2025</span>
+            <span class="lang-en">Last Update: December 28, 2025</span>
+        </span>
 
         <div class="highlight-box">
-            <p><strong>Özet:</strong> SoloMate, verilerinizi bulutta değil, sadece kendi cihazınızda saklar. Verileriniz
-                tamamen sizin kontrolünüzdedir.</p>
+            <p class="lang-tr"><strong>Özet:</strong> SoloMate, verilerinizi bulutta değil, sadece kendi cihazınızda
+                saklar. Verileriniz tamamen sizin kontrolünüzdedir.</p>
+            <p class="lang-en"><strong>Summary:</strong> SoloMate stores your data only on your device, not in the
+                cloud. Your data is entirely under your control.</p>
         </div>
 
-        <h2>1. Toplanan Bilgiler</h2>
+        <h2 class="lang-tr">1. Toplanan Bilgiler</h2>
+        <h2 class="lang-en">1. Information We Collect</h2>
 
-        <h3>1.1. Kişisel ve Finansal Veriler</h3>
-        <p>SoloMate, "Çevrimdışı Öncelikli" (Offline-First) bir uygulamadır. Uygulama içerisine girdiğiniz:</p>
-        <ul>
-            <li>Proje ve iş detayları</li>
-            <li>Müşteri iletişim bilgileri</li>
-            <li>Gelir ve gider kayıtları</li>
-            <li>Ders veya toplantı notları</li>
-        </ul>
-        <p>Bu verilerin tamamı <strong>sadece cihazınızın yerel hafızasında</strong> (SQLite Veritabanı) saklanır. Bu
-            veriler tarafımızca görüntülenemez, kopyalanamaz veya sunucularımıza aktarılamaz.</p>
+        <h3 class="lang-tr">1.1. Kişisel ve Finansal Veriler</h3>
+        <h3 class="lang-en">1.1. Personal and Financial Data</h3>
 
-        <h3>1.2. Kullanım Verileri ve Reklamlar</h3>
-        <p>Uygulamamızı ücretsiz sunabilmek amacıyla <strong>Google AdMob</strong> reklam servisini kullanmaktayız.
-            Google AdMob, size daha alakalı reklamlar sunabilmek için şu anonim verileri toplayabilir:</p>
-        <ul>
-            <li>Cihaz Reklam Kimliği (Advertising ID)</li>
-            <li>Genel konum verisi (ülke/şehir bazlı)</li>
-            <li>Uygulama kullanım istatistikleri (çökme raporları vb.)</li>
-        </ul>
-        <p>Daha detaylı bilgi için: <a href="https://policies.google.com/technologies/ads" target="_blank">Google Reklam
-                Gizlilik Politikası</a></p>
+        <div class="lang-tr">
+            <p>SoloMate, "Çevrimdışı Öncelikli" (Offline-First) bir uygulamadır. Uygulama içerisine girdiğiniz:</p>
+            <ul>
+                <li>Proje ve iş detayları</li>
+                <li>Müşteri iletişim bilgileri</li>
+                <li>Gelir ve gider kayıtları</li>
+                <li>Ders veya toplantı notları</li>
+            </ul>
+            <p>Bu verilerin tamamı <strong>sadece cihazınızın yerel hafızasında</strong> (SQLite Veritabanı) saklanır.
+                Bu veriler tarafımızca görüntülenemez, kopyalanamaz veya sunucularımıza aktarılamaz.</p>
+        </div>
+        <div class="lang-en">
+            <p>SoloMate is an "Offline-First" application. The data you enter into the application, including:</p>
+            <ul>
+                <li>Project and job details</li>
+                <li>Client contact information</li>
+                <li>Income and expense records</li>
+                <li>Lesson or meeting notes</li>
+            </ul>
+            <p>All of this data is stored <strong>only on your device's local storage</strong> (SQLite Database). This
+                data cannot be viewed, copied, or transferred to our servers by us.</p>
+        </div>
 
-        <h2>2. Verilerin Kullanımı</h2>
-        <p>Uygulama içinde oluşturduğunuz veriler, sadece uygulamanın temel fonksiyonlarını (raporlama, listeleme,
-            hatırlatma) yerine getirmek için cihazınızda işlenir.</p>
-        <p>Uygulama; kamera, mikrofon veya rehberinize <strong>erişim talep etmez</strong>. Verileriniz uygulamanın
-            kendi korumalı alanında (sandbox) tutulur.</p>
+        <h3 class="lang-tr">1.2. Kullanım Verileri ve Reklamlar</h3>
+        <h3 class="lang-en">1.2. Usage Data and Ads</h3>
 
-        <h2>3. Veri Güvenliği ve Yedekleme</h2>
-        <p>Verileriniz cihazınızda saklandığı için güvenlik, telefonunuzun güvenliği ile sınırlıdır. Uygulamayı
-            sildiğinizde veya telefonunuzu sıfırladığınızda, yerel veritabanındaki veriler de silinecektir.</p>
-        <p>Veri kaybı yaşamamak için önemli bilgilerinizi düzenli olarak kendi yöntemlerinizle not etmenizi öneririz.
-        </p>
+        <div class="lang-tr">
+            <p>Uygulamamızı ücretsiz sunabilmek amacıyla <strong>Google AdMob</strong> reklam servisini kullanmaktayız.
+                Google AdMob, size daha alakalı reklamlar sunabilmek için şu anonim verileri toplayabilir:</p>
+            <ul>
+                <li>Cihaz Reklam Kimliği (Advertising ID)</li>
+                <li>Genel konum verisi (ülke/şehir bazlı)</li>
+                <li>Uygulama kullanım istatistikleri (çökme raporları vb.)</li>
+            </ul>
+            <p>Daha detaylı bilgi için: <a href="https://policies.google.com/technologies/ads" target="_blank">Google
+                    Reklam Gizlilik Politikası</a></p>
+        </div>
+        <div class="lang-en">
+            <p>We use the <strong>Google AdMob</strong> advertising service to provide our application for free. Google
+                AdMob may collect the following anonymous data to show you more relevant ads:</p>
+            <ul>
+                <li>Device Advertising ID</li>
+                <li>General location data (country/city level)</li>
+                <li>App usage statistics (crash reports, etc.)</li>
+            </ul>
+            <p>For more detailed information: <a href="https://policies.google.com/technologies/ads"
+                    target="_blank">Google Ads Privacy Policy</a></p>
+        </div>
 
-        <h2>4. İletişim</h2>
-        <p>Bu gizlilik politikası hakkında sorularınız, endişeleriniz veya önerileriniz varsa bizimle iletişime
-            geçmekten çekinmeyin:</p>
-        <p>
-            <strong>E-posta:</strong> <a href="mailto:fthkrtl@gmail.com">fthkrtl@gmail.com</a><br>
-            <strong>Geliştirici:</strong> Fatih Kartal
-        </p>
+        <h2 class="lang-tr">2. Verilerin Kullanımı</h2>
+        <h2 class="lang-en">2. Use of Data</h2>
+
+        <div class="lang-tr">
+            <p>Uygulama içinde oluşturduğunuz veriler, sadece uygulamanın temel fonksiyonlarını (raporlama, listeleme,
+                hatırlatma) yerine getirmek için cihazınızda işlenir.</p>
+            <p>Uygulama; kamera, mikrofon veya rehberinize <strong>erişim talep etmez</strong>. Verileriniz uygulamanın
+                kendi korumalı alanında (sandbox) tutulur.</p>
+        </div>
+        <div class="lang-en">
+            <p>The data you create within the app is processed on your device solely to perform the app's core functions
+                (reporting, listing, reminders).</p>
+            <p>The app <strong>does not request access</strong> to your camera, microphone, or contacts. Your data is
+                kept within the app's own sandbox environment.</p>
+        </div>
+
+        <h2 class="lang-tr">3. Veri Güvenliği ve Yedekleme</h2>
+        <h2 class="lang-en">3. Data Security & Backup</h2>
+
+        <div class="lang-tr">
+            <p>Verileriniz cihazınızda saklandığı için güvenlik, telefonunuzun güvenliği ile sınırlıdır. Uygulamayı
+                sildiğinizde veya telefonunuzu sıfırladığınızda, yerel veritabanındaki veriler de silinecektir.</p>
+            <p>Veri kaybı yaşamamak için önemli bilgilerinizi düzenli olarak kendi yöntemlerinizle not etmenizi
+                öneririz.</p>
+        </div>
+        <div class="lang-en">
+            <p>Since your data is stored on your device, security is limited to the security of your phone. If you
+                delete the app or reset your phone, the data in the local database will also be deleted.</p>
+            <p>We recommend noting down your important information regularly using your own methods to avoid data loss.
+            </p>
+        </div>
+
+        <h2 class="lang-tr">4. İletişim</h2>
+        <h2 class="lang-en">4. Contact</h2>
+
+        <div class="lang-tr">
+            <p>Bu gizlilik politikası hakkında sorularınız, endişeleriniz veya önerileriniz varsa bizimle iletişime
+                geçmekten çekinmeyin:</p>
+            <p>
+                <strong>E-posta:</strong> <a href="mailto:fthkrtl@gmail.com">fthkrtl@gmail.com</a><br>
+                <strong>Geliştirici:</strong> Fatih Kartal
+            </p>
+        </div>
+        <div class="lang-en">
+            <p>If you have any questions, concerns, or suggestions regarding this privacy policy, please do not hesitate
+                to contact us:</p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:fthkrtl@gmail.com">fthkrtl@gmail.com</a><br>
+                <strong>Developer:</strong> Fatih Kartal
+            </p>
+        </div>
 
     </main>
 
     <footer>
         <div class="container">
-            <p>© 2025 SoloMate. Tüm hakları saklıdır.</p>
+            <p>© 2025 SoloMate. All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        function toggleLanguage() {
+            const currentLang = localStorage.getItem('lang') || 'en';
+            const newLang = currentLang === 'en' ? 'tr' : 'en';
+            setLanguage(newLang);
+        }
+
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+
+            const trElements = document.querySelectorAll('.lang-tr');
+            const enElements = document.querySelectorAll('.lang-en');
+
+            if (lang === 'tr') {
+                trElements.forEach(el => el.style.display = '');
+                enElements.forEach(el => el.style.display = 'none');
+                document.documentElement.lang = 'tr';
+            } else {
+                trElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = '');
+                document.documentElement.lang = 'en';
+            }
+        }
+
+        const savedLang = localStorage.getItem('lang');
+        const browserLang = navigator.language.startsWith('tr') ? 'tr' : 'en';
+        setLanguage(savedLang || browserLang);
+    </script>
 </body>
 
 </html>

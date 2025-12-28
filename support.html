@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoloMate - Destek</title>
+    <title>SoloMate - Support</title>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -68,6 +68,22 @@
 
         .back-link:hover {
             color: #fff;
+        }
+
+        .lang-switch {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .lang-switch:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
 
         h1 {
@@ -150,6 +166,10 @@
             color: #475569;
             font-size: 13px;
         }
+
+        .lang-tr {
+            display: none;
+        }
     </style>
 </head>
 
@@ -158,62 +178,126 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">SoloMate</a>
-                <a href="index.html" class="back-link">← Ana Sayfa</a>
+                <div style="display:flex; align-items:center; gap:20px;">
+                    <a href="index.html" class="logo">SoloMate</a>
+                    <button class="lang-switch" onclick="toggleLanguage()">TR / EN</button>
+                </div>
+                <a href="index.html" class="back-link">
+                    <span class="lang-tr">← Ana Sayfa</span>
+                    <span class="lang-en">← Home</span>
+                </a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <h1>Nasıl Yardımcı Olabiliriz?</h1>
-        <p class="subtitle">Sıkça sorulan sorulara göz atın veya bizimle iletişime geçin.</p>
+        <h1 class="lang-tr">Nasıl Yardımcı Olabiliriz?</h1>
+        <h1 class="lang-en">How Can We Help?</h1>
+
+        <p class="subtitle lang-tr">Sıkça sorulan sorulara göz atın veya bizimle iletişime geçin.</p>
+        <p class="subtitle lang-en">Check out frequently asked questions or contact us.</p>
 
         <div class="faq-list">
             <div class="faq-item">
-                <div class="faq-question">1. Verilerim nerede saklanıyor?</div>
+                <div class="faq-question">
+                    <span class="lang-tr">1. Verilerim nerede saklanıyor?</span>
+                    <span class="lang-en">1. Where is my data stored?</span>
+                </div>
                 <div class="faq-answer">
-                    Tüm verileriniz telefonunuzda güvenli bir şekilde (yerel veritabanı) saklanır. Hiçbir veriniz
-                    internet üzerinden başka bir sunucuya gönderilmez.
+                    <span class="lang-tr">Tüm verileriniz telefonunuzda güvenli bir şekilde (yerel veritabanı) saklanır.
+                        Hiçbir veriniz internet üzerinden başka bir sunucuya gönderilmez.</span>
+                    <span class="lang-en">All your data is stored securely on your phone (local database). None of your
+                        data is sent to another server over the internet.</span>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">2. Uygulamayı silersem verilerim kaybolur mu?</div>
+                <div class="faq-question">
+                    <span class="lang-tr">2. Uygulamayı silersem verilerim kaybolur mu?</span>
+                    <span class="lang-en">2. Will I lose my data if I delete the app?</span>
+                </div>
                 <div class="faq-answer">
-                    Evet, SoloMate "offline" çalışan bir uygulama olduğu için, uygulamayı sildiğinizde cihazınızdaki
-                    veriler de silinecektir.
+                    <span class="lang-tr">Evet, SoloMate "offline" çalışan bir uygulama olduğu için, uygulamayı
+                        sildiğinizde cihazınızdaki veriler de silinecektir.</span>
+                    <span class="lang-en">Yes, since SoloMate is an "offline" app, all data on your device will also be
+                        deleted if you remove the app.</span>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">3. Uygulama ücretli mi?</div>
+                <div class="faq-question">
+                    <span class="lang-tr">3. Uygulama ücretli mi?</span>
+                    <span class="lang-en">3. Is the app free?</span>
+                </div>
                 <div class="faq-answer">
-                    SoloMate'i indirmek ve tüm özelliklerini kullanmak tamamen ücretsizdir.
+                    <span class="lang-tr">SoloMate'i indirmek ve tüm özelliklerini kullanmak tamamen ücretsizdir.</span>
+                    <span class="lang-en">SoloMate is completely free to download and use all features.</span>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">4. Farklı sektörler için kullanabilir miyim?</div>
+                <div class="faq-question">
+                    <span class="lang-tr">4. Farklı sektörler için kullanabilir miyim?</span>
+                    <span class="lang-en">4. Can I use it for different sectors?</span>
+                </div>
                 <div class="faq-answer">
-                    Evet! Kurulum ekranında Yazılım, Eğitim (Özel Ders), Danışmanlık ve diğer sektörlerden size uygun
-                    olanı seçebilir, dilerseniz Ayarlar menüsünden daha sonra değiştirebilirsiniz.
+                    <span class="lang-tr">Evet! Kurulum ekranında Yazılım, Eğitim (Özel Ders), Danışmanlık ve diğer
+                        sektörlerden size uygun olanı seçebilir, dilerseniz Ayarlar menüsünden daha sonra
+                        değiştirebilirsiniz.</span>
+                    <span class="lang-en">Yes! You can select Software, Education (Tutoring), Consulting, or other
+                        sectors during setup, and you can change it later in Settings.</span>
                 </div>
             </div>
         </div>
 
         <div class="contact-box">
-            <h2>Başka bir sorunuz mu var?</h2>
-            <p>Hata bildirimi, öneri veya işbirliği için bize ulaşın.</p>
-            <a href="mailto:fthkrtl@gmail.com" class="contact-button">Bize Yazın</a>
+            <h2 class="lang-tr">Başka bir sorunuz mu var?</h2>
+            <h2 class="lang-en">Have another question?</h2>
+
+            <p class="lang-tr">Hata bildirimi, öneri veya işbirliği için bize ulaşın.</p>
+            <p class="lang-en">Contact us for bug reports, suggestions, or collaboration.</p>
+
+            <a href="mailto:fthkrtl@gmail.com" class="contact-button">
+                <span class="lang-tr">Bize Yazın</span>
+                <span class="lang-en">Contact Us</span>
+            </a>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>© 2025 SoloMate. Tüm hakları saklıdır.</p>
+            <p>© 2025 SoloMate. All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        function toggleLanguage() {
+            const currentLang = localStorage.getItem('lang') || 'en';
+            const newLang = currentLang === 'en' ? 'tr' : 'en';
+            setLanguage(newLang);
+        }
+
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+
+            const trElements = document.querySelectorAll('.lang-tr');
+            const enElements = document.querySelectorAll('.lang-en');
+
+            if (lang === 'tr') {
+                trElements.forEach(el => el.style.display = '');
+                enElements.forEach(el => el.style.display = 'none');
+                document.documentElement.lang = 'tr';
+            } else {
+                trElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = '');
+                document.documentElement.lang = 'en';
+            }
+        }
+
+        const savedLang = localStorage.getItem('lang');
+        const browserLang = navigator.language.startsWith('tr') ? 'tr' : 'en';
+        setLanguage(savedLang || browserLang);
+    </script>
 </body>
 
 </html>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoloMate - Freelance İş Takibi</title>
-    <meta name="description" content="Freelance işlerinizi, müşterilerinizi ve gelirlerinizi tek yerden yönetin.">
+    <title>SoloMate - Freelance Manager</title>
+    <meta name="description" content="Manage your freelance business, projects and income in one place.">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -32,7 +32,6 @@
             overflow-x: hidden;
         }
 
-        /* Layout */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -66,10 +65,15 @@
             letter-spacing: -0.5px;
         }
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
-            margin-left: 32px;
             font-weight: 500;
             transition: color 0.3s;
             font-size: 15px;
@@ -79,7 +83,25 @@
             color: #fff;
         }
 
-        /* Hero Section */
+        /* Language Switcher */
+        .lang-switch {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 20px;
+            transition: all 0.2s;
+        }
+
+        .lang-switch:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero */
         .hero {
             padding: 160px 0 100px;
             text-align: center;
@@ -108,6 +130,7 @@
             margin: 0 auto 40px;
         }
 
+        /* Buttons */
         .cta-buttons {
             display: flex;
             justify-content: center;
@@ -207,25 +230,6 @@
             font-size: 15px;
         }
 
-        /* Available Platforms */
-        .platforms {
-            text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 80px;
-        }
-
-        .platform-badge {
-            display: inline-block;
-            margin: 0 10px;
-            opacity: 0.6;
-            transition: opacity 0.3s;
-        }
-
-        .platform-badge:hover {
-            opacity: 1;
-        }
-
         /* Footer */
         footer {
             padding: 40px 0;
@@ -250,15 +254,41 @@
             font-size: 13px;
         }
 
-        /* Mobile */
+        .platforms {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 80px;
+        }
+
+        .platform-badge {
+            display: inline-block;
+            margin: 0 10px;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .platform-badge:hover {
+            opacity: 1;
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 36px;
             }
 
-            .nav-links {
+            .nav-links a {
                 display: none;
             }
+
+            .nav-links .lang-switch {
+                display: block;
+            }
+        }
+
+        /* Language handling */
+        .lang-tr {
+            display: none;
         }
     </style>
 </head>
@@ -270,9 +300,16 @@
             <nav>
                 <div class="logo">SoloMate</div>
                 <div class="nav-links">
-                    <a href="#features">Özellikler</a>
-                    <a href="privacy.html">Gizlilik</a>
-                    <a href="support.html">Destek</a>
+                    <a href="#features" class="lang-tr">Özellikler</a>
+                    <a href="#features" class="lang-en">Features</a>
+
+                    <a href="privacy.html" class="lang-tr">Gizlilik</a>
+                    <a href="privacy.html" class="lang-en">Privacy</a>
+
+                    <a href="support.html" class="lang-tr">Destek</a>
+                    <a href="support.html" class="lang-en">Support</a>
+
+                    <button class="lang-switch" onclick="toggleLanguage()">TR / EN</button>
                 </div>
             </nav>
         </div>
@@ -281,19 +318,22 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>
-                    Freelance İşlerinizi
-                    <span>Tek Yerden Yönetin</span>
-                </h1>
-                <p>Projelerinizi takip edin, gelirlerinizi yönetin ve müşterilerinizle olan ilişkilerinizi güçlendirin.
+                <h1 class="lang-tr">Freelance İşlerinizi <span>Tek Yerden Yönetin</span></h1>
+                <h1 class="lang-en">Manage Your Freelance Business <span>In One Place</span></h1>
+
+                <p class="lang-tr">Projelerinizi takip edin, gelirlerinizi yönetin ve müşterilerinizle olan
+                    ilişkilerinizi güçlendirin.</p>
+                <p class="lang-en">Track projects, manage income, and strengthen your client relationships effortlessly.
                 </p>
 
                 <div class="cta-buttons">
                     <a href="#" class="btn btn-primary">
-                        <span>Hemen İndir</span>
+                        <span class="lang-tr">Hemen İndir</span>
+                        <span class="lang-en">Download Now</span>
                     </a>
                     <a href="#features" class="btn btn-glass">
-                        Özellikleri Keşfet
+                        <span class="lang-tr">Özellikleri Keşfet</span>
+                        <span class="lang-en">Explore Features</span>
                     </a>
                 </div>
 
@@ -307,40 +347,55 @@
         <section id="features" class="features">
             <div class="container">
                 <div class="section-title">
-                    <h2>Neden SoloMate?</h2>
-                    <p>İş hayatınızı kolaylaştıracak güçlü araçlar.</p>
+                    <h2 class="lang-tr">Neden SoloMate?</h2>
+                    <h2 class="lang-en">Why SoloMate?</h2>
+                    <p class="lang-tr">İş hayatınızı kolaylaştıracak güçlü araçlar.</p>
+                    <p class="lang-en">Powerful tools to streamline your workflow.</p>
                 </div>
 
                 <div class="grid">
                     <!-- Feature 1 -->
                     <div class="card">
                         <div class="icon-box">📊</div>
-                        <h3>Gelişmiş Raporlar</h3>
-                        <p>Günlük, haftalık ve aylık gelir grafiklerinizi anlık olarak izleyin. Finansal hedeflerinizi
-                            tutturun.</p>
+                        <h3 class="lang-tr">Gelişmiş Raporlar</h3>
+                        <h3 class="lang-en">Advanced Reports</h3>
+                        <p class="lang-tr">Günlük, haftalık ve aylık gelir grafiklerinizi anlık olarak izleyin. Finansal
+                            hedeflerinizi tutturun.</p>
+                        <p class="lang-en">Monitor daily, weekly, and monthly income charts in real-time. Hit your
+                            financial goals.</p>
                     </div>
 
                     <!-- Feature 2 -->
                     <div class="card">
                         <div class="icon-box">📅</div>
-                        <h3>Akıllı Takvim</h3>
-                        <p>Toplantılarınızı ve teslim tarihlerini kaçırmayın. Tüm programınız tek bir bakışta
-                            karşınızda.</p>
+                        <h3 class="lang-tr">Akıllı Takvim</h3>
+                        <h3 class="lang-en">Smart Calendar</h3>
+                        <p class="lang-tr">Toplantılarınızı ve teslim tarihlerini kaçırmayın. Tüm programınız tek bir
+                            bakışta karşınızda.</p>
+                        <p class="lang-en">Never miss a meeting or deadline. Your entire schedule at a single glance.
+                        </p>
                     </div>
 
                     <!-- Feature 3 -->
                     <div class="card">
                         <div class="icon-box">👥</div>
-                        <h3>Müşteri Yönetimi</h3>
-                        <p>Müşteri veritabanınızı oluşturun, iletişim bilgilerini saklayın ve projeleri kişilere
-                            bağlayın.</p>
+                        <h3 class="lang-tr">Müşteri Yönetimi</h3>
+                        <h3 class="lang-en">Client Management</h3>
+                        <p class="lang-tr">Müşteri veritabanınızı oluşturun, iletişim bilgilerini saklayın ve projeleri
+                            kişilere bağlayın.</p>
+                        <p class="lang-en">Build your client database, store contact info, and link projects to clients
+                            easily.</p>
                     </div>
 
                     <!-- Feature 4 -->
                     <div class="card">
                         <div class="icon-box">🔒</div>
-                        <h3>Çevrimdışı & Güvenli</h3>
-                        <p>İnternet gerekmez. Tüm verileriniz sadece telefonunuzda saklanır ve dışarıya aktarılmaz.</p>
+                        <h3 class="lang-tr">Çevrimdışı & Güvenli</h3>
+                        <h3 class="lang-en">Offline & Secure</h3>
+                        <p class="lang-tr">İnternet gerekmez. Tüm verileriniz sadece telefonunuzda saklanır ve dışarıya
+                            aktarılmaz.</p>
+                        <p class="lang-en">No internet required. All data is stored locally on your device and never
+                            exported.</p>
                     </div>
                 </div>
             </div>
@@ -350,14 +405,52 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="privacy.html">Gizlilik Politikası</a>
-                <a href="support.html">Destek</a>
-                <a href="mailto:fthkrtl@gmail.com">İletişim</a>
+                <a href="privacy.html">
+                    <span class="lang-tr">Gizlilik Politikası</span>
+                    <span class="lang-en">Privacy Policy</span>
+                </a>
+                <a href="support.html">
+                    <span class="lang-tr">Destek</span>
+                    <span class="lang-en">Support</span>
+                </a>
+                <a href="mailto:fthkrtl@gmail.com">
+                    <span class="lang-tr">İletişim</span>
+                    <span class="lang-en">Contact</span>
+                </a>
             </div>
-            <p class="copyright">© 2025 SoloMate. Tüm hakları saklıdır.</p>
+            <p class="copyright">© 2025 SoloMate. All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        function toggleLanguage() {
+            const currentLang = localStorage.getItem('lang') || 'en';
+            const newLang = currentLang === 'en' ? 'tr' : 'en';
+            setLanguage(newLang);
+        }
+
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+
+            const trElements = document.querySelectorAll('.lang-tr');
+            const enElements = document.querySelectorAll('.lang-en');
+
+            if (lang === 'tr') {
+                trElements.forEach(el => el.style.display = '');
+                enElements.forEach(el => el.style.display = 'none');
+                document.documentElement.lang = 'tr';
+            } else {
+                trElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = '');
+                document.documentElement.lang = 'en';
+            }
+        }
+
+        // Init
+        const savedLang = localStorage.getItem('lang');
+        const browserLang = navigator.language.startsWith('tr') ? 'tr' : 'en';
+        setLanguage(savedLang || browserLang);
+    </script>
 </body>
 
 </html>
