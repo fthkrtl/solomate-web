@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoloMate - Freelance İş Takibi</title>
+    <meta name="description" content="Freelance işlerinizi, müşterilerinizi ve gelirlerinizi tek yerden yönetin.">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --bg-dark: #020617;
+            --card-bg: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Satoshi', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 24px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(2, 6, 23, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 32px;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            background: radial-gradient(circle at top center, #1e1b4b 0%, transparent 60%);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            display: block;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Features */
+        .features {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 24px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* Available Platforms */
+        .platforms {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 80px;
+        }
+
+        .platform-badge {
+            display: inline-block;
+            margin: 0 10px;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .platform-badge:hover {
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .copyright {
+            color: #475569;
+            font-size: 13px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">SoloMate</div>
+                <div class="nav-links">
+                    <a href="#features">Özellikler</a>
+                    <a href="privacy.html">Gizlilik</a>
+                    <a href="support.html">Destek</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>
+                    Freelance İşlerinizi
+                    <span>Tek Yerden Yönetin</span>
+                </h1>
+                <p>Projelerinizi takip edin, gelirlerinizi yönetin ve müşterilerinizle olan ilişkilerinizi güçlendirin.
+                </p>
+
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">
+                        <span>Hemen İndir</span>
+                    </a>
+                    <a href="#features" class="btn btn-glass">
+                        Özellikleri Keşfet
+                    </a>
+                </div>
+
+                <div class="platforms">
+                    <span class="platform-badge" style="font-size: 24px;"> App Store</span>
+                    <span class="platform-badge" style="font-size: 24px;">▶ Play Store</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Neden SoloMate?</h2>
+                    <p>İş hayatınızı kolaylaştıracak güçlü araçlar.</p>
+                </div>
+
+                <div class="grid">
+                    <!-- Feature 1 -->
+                    <div class="card">
+                        <div class="icon-box">📊</div>
+                        <h3>Gelişmiş Raporlar</h3>
+                        <p>Günlük, haftalık ve aylık gelir grafiklerinizi anlık olarak izleyin. Finansal hedeflerinizi
+                            tutturun.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="card">
+                        <div class="icon-box">📅</div>
+                        <h3>Akıllı Takvim</h3>
+                        <p>Toplantılarınızı ve teslim tarihlerini kaçırmayın. Tüm programınız tek bir bakışta
+                            karşınızda.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="card">
+                        <div class="icon-box">👥</div>
+                        <h3>Müşteri Yönetimi</h3>
+                        <p>Müşteri veritabanınızı oluşturun, iletişim bilgilerini saklayın ve projeleri kişilere
+                            bağlayın.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="card">
+                        <div class="icon-box">🔒</div>
+                        <h3>Çevrimdışı & Güvenli</h3>
+                        <p>İnternet gerekmez. Tüm verileriniz sadece telefonunuzda saklanır ve dışarıya aktarılmaz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Gizlilik Politikası</a>
+                <a href="support.html">Destek</a>
+                <a href="mailto:fthkrtl@gmail.com">İletişim</a>
+            </div>
+            <p class="copyright">© 2025 SoloMate. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

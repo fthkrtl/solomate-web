@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoloMate - Gizlilik Politikası</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --bg-dark: #020617;
+            --card-bg: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Satoshi', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 60px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .content {
+            padding-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 40px 0 16px;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 24px 0 12px;
+            color: #e2e8f0;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        ul {
+            color: var(--text-muted);
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #818cf8;
+        }
+
+        .update-date {
+            color: var(--text-muted);
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #fff;
+        }
+
+        .highlight-box {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 24px;
+            border-radius: 16px;
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #e0e7ff;
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            color: #475569;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">SoloMate</a>
+                <a href="index.html" class="back-link">← Ana Sayfa</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container content">
+        <h1>Gizlilik Politikası</h1>
+        <span class="update-date">Son Güncelleme: 28 Aralık 2025</span>
+
+        <div class="highlight-box">
+            <p><strong>Özet:</strong> SoloMate, verilerinizi bulutta değil, sadece kendi cihazınızda saklar. Verileriniz
+                tamamen sizin kontrolünüzdedir.</p>
+        </div>
+
+        <h2>1. Toplanan Bilgiler</h2>
+
+        <h3>1.1. Kişisel ve Finansal Veriler</h3>
+        <p>SoloMate, "Çevrimdışı Öncelikli" (Offline-First) bir uygulamadır. Uygulama içerisine girdiğiniz:</p>
+        <ul>
+            <li>Proje ve iş detayları</li>
+            <li>Müşteri iletişim bilgileri</li>
+            <li>Gelir ve gider kayıtları</li>
+            <li>Ders veya toplantı notları</li>
+        </ul>
+        <p>Bu verilerin tamamı <strong>sadece cihazınızın yerel hafızasında</strong> (SQLite Veritabanı) saklanır. Bu
+            veriler tarafımızca görüntülenemez, kopyalanamaz veya sunucularımıza aktarılamaz.</p>
+
+        <h3>1.2. Kullanım Verileri ve Reklamlar</h3>
+        <p>Uygulamamızı ücretsiz sunabilmek amacıyla <strong>Google AdMob</strong> reklam servisini kullanmaktayız.
+            Google AdMob, size daha alakalı reklamlar sunabilmek için şu anonim verileri toplayabilir:</p>
+        <ul>
+            <li>Cihaz Reklam Kimliği (Advertising ID)</li>
+            <li>Genel konum verisi (ülke/şehir bazlı)</li>
+            <li>Uygulama kullanım istatistikleri (çökme raporları vb.)</li>
+        </ul>
+        <p>Daha detaylı bilgi için: <a href="https://policies.google.com/technologies/ads" target="_blank">Google Reklam
+                Gizlilik Politikası</a></p>
+
+        <h2>2. Verilerin Kullanımı</h2>
+        <p>Uygulama içinde oluşturduğunuz veriler, sadece uygulamanın temel fonksiyonlarını (raporlama, listeleme,
+            hatırlatma) yerine getirmek için cihazınızda işlenir.</p>
+        <p>Uygulama; kamera, mikrofon veya rehberinize <strong>erişim talep etmez</strong>. Verileriniz uygulamanın
+            kendi korumalı alanında (sandbox) tutulur.</p>
+
+        <h2>3. Veri Güvenliği ve Yedekleme</h2>
+        <p>Verileriniz cihazınızda saklandığı için güvenlik, telefonunuzun güvenliği ile sınırlıdır. Uygulamayı
+            sildiğinizde veya telefonunuzu sıfırladığınızda, yerel veritabanındaki veriler de silinecektir.</p>
+        <p>Veri kaybı yaşamamak için önemli bilgilerinizi düzenli olarak kendi yöntemlerinizle not etmenizi öneririz.
+        </p>
+
+        <h2>4. İletişim</h2>
+        <p>Bu gizlilik politikası hakkında sorularınız, endişeleriniz veya önerileriniz varsa bizimle iletişime
+            geçmekten çekinmeyin:</p>
+        <p>
+            <strong>E-posta:</strong> <a href="mailto:fthkrtl@gmail.com">fthkrtl@gmail.com</a><br>
+            <strong>Geliştirici:</strong> Fatih Kartal
+        </p>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 SoloMate. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoloMate - Destek</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --bg-dark: #020617;
+            --card-bg: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Satoshi', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 60px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 18px;
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(192, 132, 252, 0.1) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .contact-box h2 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-2px);
+            background: var(--primary-dark);
+        }
+
+        footer {
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            color: #475569;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">SoloMate</a>
+                <a href="index.html" class="back-link">← Ana Sayfa</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Nasıl Yardımcı Olabiliriz?</h1>
+        <p class="subtitle">Sıkça sorulan sorulara göz atın veya bizimle iletişime geçin.</p>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">1. Verilerim nerede saklanıyor?</div>
+                <div class="faq-answer">
+                    Tüm verileriniz telefonunuzda güvenli bir şekilde (yerel veritabanı) saklanır. Hiçbir veriniz
+                    internet üzerinden başka bir sunucuya gönderilmez.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">2. Uygulamayı silersem verilerim kaybolur mu?</div>
+                <div class="faq-answer">
+                    Evet, SoloMate "offline" çalışan bir uygulama olduğu için, uygulamayı sildiğinizde cihazınızdaki
+                    veriler de silinecektir.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">3. Uygulama ücretli mi?</div>
+                <div class="faq-answer">
+                    SoloMate'i indirmek ve tüm özelliklerini kullanmak tamamen ücretsizdir.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">4. Farklı sektörler için kullanabilir miyim?</div>
+                <div class="faq-answer">
+                    Evet! Kurulum ekranında Yazılım, Eğitim (Özel Ders), Danışmanlık ve diğer sektörlerden size uygun
+                    olanı seçebilir, dilerseniz Ayarlar menüsünden daha sonra değiştirebilirsiniz.
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h2>Başka bir sorunuz mu var?</h2>
+            <p>Hata bildirimi, öneri veya işbirliği için bize ulaşın.</p>
+            <a href="mailto:fthkrtl@gmail.com" class="contact-button">Bize Yazın</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 SoloMate. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
