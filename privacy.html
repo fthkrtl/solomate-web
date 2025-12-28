@@ -334,12 +334,16 @@
             const enElements = document.querySelectorAll('.lang-en');
 
             if (lang === 'tr') {
-                trElements.forEach(el => el.style.display = '');
+                trElements.forEach(el => {
+                    el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block';
+                });
                 enElements.forEach(el => el.style.display = 'none');
                 document.documentElement.lang = 'tr';
             } else {
                 trElements.forEach(el => el.style.display = 'none');
-                enElements.forEach(el => el.style.display = '');
+                enElements.forEach(el => {
+                    el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block';
+                });
                 document.documentElement.lang = 'en';
             }
         }

@@ -262,14 +262,26 @@
         }
 
         .platform-badge {
-            display: inline-block;
-            margin: 0 10px;
-            opacity: 0.6;
-            transition: opacity 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 16px;
+            opacity: 0.7;
+            transition: all 0.3s;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
         }
 
         .platform-badge:hover {
             opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        .platform-badge svg {
+            width: 24px;
+            height: 24px;
         }
 
         @media (max-width: 768px) {
@@ -338,8 +350,20 @@
                 </div>
 
                 <div class="platforms">
-                    <span class="platform-badge" style="font-size: 24px;"> App Store</span>
-                    <span class="platform-badge" style="font-size: 24px;">▶ Play Store</span>
+                    <a href="#" class="platform-badge">
+                        <svg viewBox="0 0 384 512" width="24" height="24" fill="currentColor">
+                            <path
+                                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 49 126.7 83.6 126.7 25.9 0 37.3-19.1 69.8-19.1 31.8 0 42.6 19.1 71.7 19.1 35.5 0 52.3-32.6 69.8-82.6l4.6-13.6c-42-16.8-59.5-62.5-59.2-116.4zM264.3 97.1c25.4-31.5 18-80.1 17.5-82.1-23.9 3.5-59.2 19.7-81.5 81.4 35.5 2.1 48-18.4 64-1.3z" />
+                        </svg>
+                        <span>App Store</span>
+                    </a>
+                    <a href="#" class="platform-badge">
+                        <svg viewBox="0 0 512 512" width="24" height="24" fill="currentColor">
+                            <path
+                                d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
+                        </svg>
+                        <span>Play Store</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -436,12 +460,17 @@
             const enElements = document.querySelectorAll('.lang-en');
 
             if (lang === 'tr') {
-                trElements.forEach(el => el.style.display = '');
+                trElements.forEach(el => {
+                    // Span gibi inline elemanlar için 'inline', diğerleri için 'block' veya boş (varsayılan)
+                    el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block';
+                });
                 enElements.forEach(el => el.style.display = 'none');
                 document.documentElement.lang = 'tr';
             } else {
                 trElements.forEach(el => el.style.display = 'none');
-                enElements.forEach(el => el.style.display = '');
+                enElements.forEach(el => {
+                    el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block';
+                });
                 document.documentElement.lang = 'en';
             }
         }
